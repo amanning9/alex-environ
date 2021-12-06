@@ -1,0 +1,5 @@
+[user]
+	email = mail@alex-m.co.uk
+	name = Alex Manning
+[include]
+  path = .alex-environ/home/.gitconfig

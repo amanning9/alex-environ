@@ -1,0 +1,6 @@
+# If not running interactively, don't do anything else
+[[ $- != *i* ]] && return
+
+#things for uni/work machines
+
+alias sudo='echo "You will probably get told off if you do that"'

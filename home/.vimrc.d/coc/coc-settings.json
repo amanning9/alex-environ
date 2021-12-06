@@ -1,0 +1,10 @@
+{
+    "python.linting.enabled": false,
+    "rust-client.disableRustup": true,
+    "javascript.format.enabled": false,
+    "javascript.validate.enable": false,
+    "typescript.format.enabled": false,
+    "typescript.validate.enable": false,
+    "json.format.enable": false,
+    "diagnostic.displayByAle": true
+}

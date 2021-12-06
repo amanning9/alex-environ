@@ -1,0 +1,24 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+fi
+
+#Add to PATH HERE
+#PATH=$PATH:
+
+export alex_load_keys=0
+
+#source alex's global bash_profile
+if [ -f ~/.alex-environ/home/.bash_profile ]; then
+  . ~/.alex-environ/home/.bash_profile
+fi
+
+#set my prompt. Comment this for local propt color
+if [ -f ~/.alex-environ/home/.bash_profile.d/prompt ]; then
+  . ~/.alex-environ/home/.bash_profile.d/prompt
+fi
+
+#Start Tmux, if we want it
+# . ~/.alex-environ/home/scripts/tmux.sh

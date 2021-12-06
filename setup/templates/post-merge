@@ -1,0 +1,3 @@
+#!/bin/bash
+~/.alex-environ/setup/git_hooks/fix-ssh.sh
+~/.alex-environ/setup/git_hooks/auth_keys.sh

@@ -1,0 +1,36 @@
+---
+
+extends: default
+
+rules:
+  braces: enable
+  brackets: enable
+  colons: enable
+  commas: enable
+  comments:
+    require-starting-space: true
+    ignore-shebangs: true
+    min-spaces-from-content: 1
+  comments-indentation: {}
+  document-end: disable
+  document-start:
+    present: true
+  empty-lines: enable
+  empty-values: enable
+  hyphens: enable
+  indentation: enable
+  key-duplicates: enable
+  key-ordering: {}
+  line-length: enable
+  new-line-at-end-of-file: enable
+  new-lines: enable
+  octal-values: enable
+  quoted-strings:
+    quote-type: double
+  trailing-spaces: enable
+  truthy:
+    allowed-values:
+      - 'true'
+      - 'false'
+      - 'on'
+      - 'off'

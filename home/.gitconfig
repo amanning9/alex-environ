@@ -1,0 +1,21 @@
+[core]
+	editor = vim
+	preloadindex = true
+	fscache = true
+[push]
+	default = simple
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

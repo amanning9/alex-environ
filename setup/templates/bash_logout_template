@@ -1,0 +1,5 @@
+# ~/.bash_logout
+
+if [ -f ~/.alex-environ/home/.bash_logout ]; then
+  . ~/.alex-environ/home/.bash_logout
+fi

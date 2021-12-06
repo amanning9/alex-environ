@@ -1,0 +1,10 @@
+from fedora packages
+python3-flake8
+python3-pylint
+tidy
+csslint
+yamllinkt
+vint
+
+from npm -g
+fixjson

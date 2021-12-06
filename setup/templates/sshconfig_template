@@ -1,0 +1,2 @@
+Include ~/.alex-environ/home/.ssh/config
+Include ~/.alex-environ/home/.ssh/config.d/config_clever

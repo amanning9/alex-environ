@@ -1,0 +1,72 @@
+#!/bin/sh
+
+
+SSH_ENV=$HOME/.ssh/environment.`hostname`
+
+start_agent ()
+{
+        # If not running interactively, don't do anything else
+        [[ $- != *i* ]] && return
+
+        if [ `uname -o` = "Cygwin" ]
+        then
+                echo "Connecting to ssh-pageant..."
+                eval $(/usr/bin/ssh-pageant -r -a "/tmp/.ssh-pageant-$USERNAME")
+        else
+                ssh-agent > ${SSH_ENV}
+                chmod 600 ${SSH_ENV}
+                . ${SSH_ENV} > /dev/null
+                echo "Created a new ssh-agent $SSH_AGENT_PID"
+        fi
+
+}
+
+load_keys ()
+{
+        if [ "$alex_load_keys" == "1" ]
+        then
+                ssh-add
+        fi
+}
+
+# Source SSH settings, if applicable
+# If a ssh auth socket exists at this point, it must be from a forwarded agent.
+if [ -n "${SSH_AUTH_SOCK+set}" ]
+then
+        if [ -f "${SSH_ENV}" ]
+        then
+                AUTH_SOCK=$SSH_AUTH_SOCK
+                . ${SSH_ENV} > /dev/null
+                kill -9 $SSH_AGENT_PID
+                pkill -9 -u $USER ssh-agent
+                rm $SSH_ENV
+                unset SSH_AGENT_PID
+                unset SSH_ENV
+                SSH_AUTH_SOCK=$AUTH_SOCK
+                export SSH_AUTH_SOCK
+        fi
+        echo "Connected to forwarded SSH agent ${SSH_AUTH_SOCK}."
+        echo "The following keys are available:"
+        ssh-add -l
+else
+        if [ -f "${SSH_ENV}" ]
+        then
+                . ${SSH_ENV} > /dev/null
+                ssh-add -L > /dev/null 2>&1
+                case $? in
+                        0) echo "Connected to existing ssh-agent $SSH_AGENT_PID."
+                                echo "The following keys are available:"
+                                ssh-add -l
+                                ;;
+                        1) echo "Connected to existing ssh-agent $SSH_AGENT_PID. No keys were found in the agent."
+                                load_keys
+                                ;;
+                        2) start_agent
+                                load_keys
+                                ;;
+                esac
+        else
+                start_agent
+                load_keys
+        fi
+fi

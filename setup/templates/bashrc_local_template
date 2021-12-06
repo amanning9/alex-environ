@@ -1,0 +1,20 @@
+# .bashrc
+# .bashrc template
+
+#SET PATH IN .BASH_PROFILE
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# GLOBAL bashrc
+if [ -f ~/.alex-environ/home/.bashrc ]; then
+. ~/.alex-environ/home/.bashrc
+fi
+
+#if [ -f ~/.alex-environ/home/.bashrc.d/work ]; then
+#. ~/.alex-environ/home/.bashrc.d/work
+#fi
+
+# Local User specific aliases and functions
