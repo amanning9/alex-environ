@@ -12,9 +12,6 @@ PATH=$AE_HOME/scripts:$PATH
 PATH=/opt/bin:$PATH
 export PATH
 
-PYTHONPATH=$HOME/.python-modules:$PYTHONPATH
-export PYTHONPATH
-
 # If not running interactively, don't do anything else
 [[ $- != *i* ]] && return
 
