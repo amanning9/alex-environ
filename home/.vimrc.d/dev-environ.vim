@@ -5,7 +5,13 @@ let g:ale_fix_on_save = 1
 
 "ALE defaults to all linters turned on, so this turns some off.
 let g:ale_linters = {
-            \   'python': ['flake8', 'pylint', 'black'],
+            \   'python': [
+            \       'pylint',
+            \       'flake8',
+            \       'pydocstyle',
+            \       'mypy',
+            \       'bandit',
+            \    ],
             \   'php': ['phpcs'],
             \   'spec': ['rpmlint'],
             \}
