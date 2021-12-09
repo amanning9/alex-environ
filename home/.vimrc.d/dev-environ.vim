@@ -38,7 +38,7 @@ let g:ale_json_jq_options = '--sort-keys'
 
 """Base Settings for COC
 let g:coc_config_home = '~/.alex-environ/home/.vimrc.d/coc'
-let g:coc_global_extensions = ['coc-python', 'coc-rls', 'coc-tsserver', 'coc-json', 'coc-htmldjango']
+let g:coc_global_extensions = ['coc-jedi', 'coc-rls', 'coc-tsserver', 'coc-json', 'coc-htmldjango']
 """Language Specific Options.
 "Remeber that COC has it's own settings file too, so most of it's settings are
 "there.

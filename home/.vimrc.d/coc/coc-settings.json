@@ -1,7 +1,4 @@
 {
-    "python.linting.enabled": false,
-    "python.jediEnabled": false,
-
     "rust-client.disableRustup": true,
 
     "javascript.format.enabled": false,
