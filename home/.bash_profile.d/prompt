@@ -49,6 +49,9 @@ case `hostname -s` in
     vesta)
         trail=🍓
         ;;
+    rukbat)
+        trail=🍓
+        ;;
 esac
 fi
 
