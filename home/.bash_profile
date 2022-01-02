@@ -65,8 +65,3 @@ then
 fi
 
 source $AE_HOME/.bashrc.d/functions.sh
-
-for f in $AE_HOME/.bash_completions/*
-do
-    source $f
-done
