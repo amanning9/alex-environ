@@ -46,6 +46,9 @@ case `hostname -s` in
         c1=$CYAN
         c2=$GREEN
         ;;
+    vesta)
+        trail=🍓
+        ;;
 esac
 fi
 
