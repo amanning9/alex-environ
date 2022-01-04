@@ -27,6 +27,7 @@ let g:ale_fixers = {
             \   'scss': ['prettier'],
             \   'rust': ['rustfmt'],
             \   'javascript' : ['eslint'],
+            \   'javascriptreact' : ['eslint'],
             \   'typescript': ['eslint'],
             \   'vue': ['eslint'],
             \   'json' :['jq'],
