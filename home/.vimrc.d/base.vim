@@ -140,10 +140,6 @@ endif
 
 " APPEARANCE
 " ---------------------------------------
-if has('gui_running')
-    set guifont=Monospace\ 14
-endif
-
 " Fallback colors
 colorscheme peachpuff
 

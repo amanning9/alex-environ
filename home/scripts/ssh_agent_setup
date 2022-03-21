@@ -31,7 +31,7 @@ load_keys ()
 
 # Source SSH settings, if applicable
 # If a ssh auth socket exists at this point, it must be from a forwarded agent.
-if [ -n "${SSH_AUTH_SOCK+set}" ]
+if [ -n "${SSH_AUTH_SOCK+set}" ] && [[ ${SSH_AUTH_SOCK} != *"com.apple.launchd"* ]]
 then
         if [ -f "${SSH_ENV}" ]
         then

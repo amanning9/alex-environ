@@ -49,7 +49,6 @@ call plug#end()
 if has('gui_running')
     set background=dark
     colorscheme solarized
-    "set guifont=Menlo\ Regular:h12
 else
     set background=dark
     colorscheme gruvbox
