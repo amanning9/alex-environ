@@ -5,6 +5,8 @@ SSH_ENV=$HOME/.ssh/environment.`hostname`
 
 start_agent ()
 {
+    # $1 Socket path to bind to.
+
         # If not running interactively, don't do anything else
         [[ $- != *i* ]] && return
 
@@ -13,7 +15,7 @@ start_agent ()
                 echo "Connecting to ssh-pageant..."
                 eval $(/usr/bin/ssh-pageant -r -a "/tmp/.ssh-pageant-$USERNAME")
         else
-                ssh-agent > ${SSH_ENV}
+                ssh-agent $alex_agent_args > ${SSH_ENV}
                 chmod 600 ${SSH_ENV}
                 . ${SSH_ENV} > /dev/null
                 echo "Created a new ssh-agent $SSH_AGENT_PID"
