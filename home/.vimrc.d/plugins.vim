@@ -17,6 +17,9 @@ function! LoadPlugins()
         Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocompetion
     endif
 
+    Plug 'puremourning/vimspector'
+    Plug 'sagi-z/vimspectorpy', { 'do': { -> vimspectorpy#update() } }
+
     " THEMES
     Plug 'altercation/vim-colors-solarized'             " Solarized is a pretty colour scheme
     Plug 'morhetz/gruvbox'                              " gruvbox is a good colour scheme on 256 colours
