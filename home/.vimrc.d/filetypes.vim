@@ -46,3 +46,8 @@ let g:tex_flavor='latex'
 
 "Vim
 au BufNewFile,BufRead */.vimrc.d/* set filetype=vim
+
+"Helm
+autocmd BufRead,BufNewFile */templates/*.yaml,*/templates/*.tpl,*.gotmpl,helmfile.yaml set ft=helm
+" Use {{/* */}} as comments
+autocmd FileType helm setlocal commentstring={{/*\ %s\ */}}
