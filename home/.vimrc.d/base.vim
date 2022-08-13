@@ -48,6 +48,7 @@ set hlsearch                     " Highlight all search matches
 set showmatch                    " Show the matching bracket
 set matchpairs=(:),{:},[:]       " List of characters we expect in balanced pairs
 set cursorline                   " Highlights the current line
+set cursorcolumn                 " Highlights the current column
 
 " Mouse options:
 set mouse=a                      " Enable the mouse for all modes
@@ -140,10 +141,6 @@ endif
 
 " APPEARANCE
 " ---------------------------------------
-if has('gui_running')
-    set guifont=Monospace\ 14
-endif
-
 " Fallback colors
 colorscheme peachpuff
 

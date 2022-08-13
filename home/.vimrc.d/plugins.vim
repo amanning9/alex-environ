@@ -23,6 +23,7 @@ function! LoadPlugins()
 
     Plug 'amanning9/django-plus.vim'                    " Improvements for identifying files in django projects.
     Plug 'towolf/vim-helm'
+    Plug 'Glench/Vim-Jinja2-Syntax'                     " Jinja syntax detection.
 endfunction
 
 " PLUGIN INITIALISATION
@@ -50,7 +51,6 @@ call plug#end()
 if has('gui_running')
     set background=dark
     colorscheme solarized
-    "set guifont=Menlo\ Regular:h12
 else
     set background=dark
     colorscheme gruvbox
