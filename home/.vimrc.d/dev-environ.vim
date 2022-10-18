@@ -8,7 +8,6 @@ let g:ale_linters = {
             \   'python': [
             \       'pylint',
             \       'flake8',
-            \       'pydocstyle',
             \       'mypy',
             \       'bandit',
             \    ],

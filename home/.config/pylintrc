@@ -140,7 +140,7 @@ confidence=
 #        exception-escape,
 #        comprehension-escape
 
-disable=bad-continuation,unused-variable,line-too-long,missing-class-docstring
+disable=bad-continuation,unused-variable,line-too-long,missing-class-docstring,missing-function-docstring
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
