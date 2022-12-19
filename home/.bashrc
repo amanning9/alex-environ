@@ -31,3 +31,10 @@ then
     alias sudo='sudo -A'
 fi
 
+# Fix the horrible shell that poetry gives you.
+if [ -n "$POETRY_ACTIVE" ]
+then
+    export VIRTUAL_ENV_DISABLE_PROMPT=1
+    cwd=$(pwd)
+    export PS1="\[\033[48;5;27m\]${cwd##*/}\[$(tput sgr0)\] 🖋️📜 "
+fi
