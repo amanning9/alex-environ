@@ -25,6 +25,7 @@ function! LoadPlugins()
     Plug 'morhetz/gruvbox'                              " gruvbox is a good colour scheme on 256 colours
 
     Plug 'amanning9/django-plus.vim'                    " Improvements for identifying files in django projects.
+    Plug 'towolf/vim-helm'
     Plug 'Glench/Vim-Jinja2-Syntax'                     " Jinja syntax detection.
 endfunction
 
