@@ -19,3 +19,6 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+
+[core]
+    hooksPath = ~/.alex-environ/private/home/git_hooks

@@ -8,7 +8,6 @@ let g:ale_linters = {
             \   'python': [
             \       'pylint',
             \       'flake8',
-            \       'pydocstyle',
             \       'mypy',
             \       'bandit',
             \    ],
@@ -49,3 +48,7 @@ let g:coc_global_extensions = ['coc-jedi', 'coc-rls', 'coc-tsserver', 'coc-json'
 """Language Specific Options.
 "Remeber that COC has it's own settings file too, so most of it's settings are
 "there.
+
+" VIMSPECTOR
+let g:vimspector_enable_mappings = 'HUMAN'
+let g:vimspector_install_gadgets = ['debugpy']
