@@ -627,4 +627,4 @@ savefig.bbox        : tight # 'tight' or 'standard'.
                                    # On Windows use the full path since convert
                                    # is also the name of a system tool.
                                    #
-mpl_toolkits.legacy_colorbar: False
+#mpl_toolkits.legacy_colorbar: False

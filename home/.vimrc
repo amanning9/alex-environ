@@ -9,3 +9,5 @@ exe "source " . g:my_environ_dir . "/home/.vimrc.d/plugins.vim"
 exe "source " . g:my_environ_dir . "/home/.vimrc.d/dev-environ.vim"
 
 exe "source " . g:my_environ_dir . "/home/.vimrc.d/gui.vim"
+
+exe "source " . g:my_environ_dir . "/home/.vimrc.d/override.vim"

@@ -25,6 +25,8 @@ set nocompatible                 " The most important VIM option
 scriptencoding utf-8		         " Convert all scripts into UTF8 format
 
 " Typing options:
+" There is an indent override in override.vim
+
 set smarttab
 set tabstop=4                    " Set the default tabstops
 set shiftwidth=4                 " Set the default autoindent

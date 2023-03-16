@@ -20,13 +20,15 @@ rules:
   hyphens: enable
   indentation: enable
   key-duplicates: enable
-  key-ordering: {}
+  key-ordering: disable
   line-length: enable
   new-line-at-end-of-file: enable
   new-lines: enable
   octal-values: enable
   quoted-strings:
     quote-type: double
+    required: only-when-needed
+    allow-quoted-quotes: true
   trailing-spaces: enable
   truthy:
     allowed-values:
