@@ -10,6 +10,7 @@ let g:ale_linters = {
             \       'flake8',
             \       'mypy',
             \       'bandit',
+            \       'unimport',
             \    ],
             \   'php': ['phpcs'],
             \   'spec': ['rpmlint'],
