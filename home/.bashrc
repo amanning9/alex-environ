@@ -18,9 +18,8 @@ HISTFILESIZE=2000
 #resize window each command
 shopt -s checkwinsize
 
-#set pretty colors for LS
+#some useful aliases
 alias ls='ls --color=auto'
-alias grep='grep --color=auto'
 alias jprint='python3 -m json.tool'
 alias sl='ls --color=auto'
 alias vim='vim -p'
@@ -38,3 +37,6 @@ then
     cwd=$(pwd)
     export PS1="\[\033[48;5;27m\]${cwd##*/}\[$(tput sgr0)\] 🖋️📜 "
 fi
+
+# Exclude some folders from grep by default.
+alias grep='grep --color=auto --exclude-dir=".mypy_cache" --exclude-dir=".git" --exclude-dir=".tox" --exclude-dir="__pycache__"'

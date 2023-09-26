@@ -9,18 +9,30 @@ filetype plugin on
 "Apache
 au BufNewFile,BufRead /*/httpd/conf.d/* setf apache
 
+"ssh
+au BufNewFile,BufRead */.ssh/config.d/* setf sshconfig
+
 "Django
 autocmd BufNewFile,BufRead *.djt set syntax=django
 autocmd BufNewFile,BufRead *.html.djt set syntax=htmldjango
 
 "Python
-    au BufNewFile,BufRead *.py
-                \ setlocal tabstop=4
-                \ | setlocal softtabstop=4
-                \ | setlocal shiftwidth=4
-                \ | setlocal expandtab
-                \ | setlocal autoindent
-                \ | setlocal fileformat=unix
+au FileType python
+            \ setlocal tabstop=4
+            \ | setlocal softtabstop=4
+            \ | setlocal shiftwidth=4
+            \ | setlocal expandtab
+            \ | setlocal autoindent
+            \ | setlocal fileformat=unix
+
+"yaml
+au FileType yaml
+            \ setlocal tabstop=2
+            \ | setlocal softtabstop=2
+            \ | setlocal shiftwidth=2
+            \ | setlocal expandtab
+            \ | setlocal autoindent
+            \ | setlocal fileformat=unix
 
 "FORTRAN
 let fortran_fixed_source = 1
@@ -48,6 +60,6 @@ let g:tex_flavor='latex'
 au BufNewFile,BufRead */.vimrc.d/* set filetype=vim
 
 "Helm
-autocmd BufRead,BufNewFile */templates/*.yaml,*/templates/*.tpl,*.gotmpl,helmfile.yaml set ft=helm
+autocmd BufRead,BufNewFile */templates/*.yaml,*/templates/*.tpl,*.gotmpl set ft=helm
 " Use {{/* */}} as comments
 autocmd FileType helm setlocal commentstring={{/*\ %s\ */}}
