@@ -9,5 +9,9 @@
 
     "json.format.enable": false,
 
-    "diagnostic.displayByAle": true
+    "diagnostic.displayByAle": true,
+
+    "jedi.enable": true,
+    "suggest.noselect": true,
+
 }

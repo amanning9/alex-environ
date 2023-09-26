@@ -21,6 +21,7 @@ endif
 " OPTIONS
 " ---------------------------------------
 set nocompatible                 " The most important VIM option
+set encoding=utf-8              " Why have anything else.
 
 scriptencoding utf-8		         " Convert all scripts into UTF8 format
 
