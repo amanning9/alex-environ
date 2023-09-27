@@ -63,3 +63,11 @@ au BufNewFile,BufRead */.vimrc.d/* set filetype=vim
 autocmd BufRead,BufNewFile */templates/*.yaml,*/templates/*.tpl,*.gotmpl set ft=helm
 " Use {{/* */}} as comments
 autocmd FileType helm setlocal commentstring={{/*\ %s\ */}}
+" Same as for yaml above
+au FileType helm
+            \ setlocal tabstop=2
+            \ | setlocal softtabstop=2
+            \ | setlocal shiftwidth=2
+            \ | setlocal expandtab
+            \ | setlocal autoindent
+            \ | setlocal fileformat=unix

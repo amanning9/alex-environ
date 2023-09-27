@@ -54,7 +54,7 @@ let g:coc_global_extensions = ['coc-jedi', 'coc-rls', 'coc-tsserver', 'coc-json'
 let g:vimspector_enable_mappings = 'HUMAN'
 let g:vimspector_install_gadgets = ['debugpy']
 
-" Config for ALE originally from their github.
+" Config for Coc originally from their github.
 " Use tab for trigger completion with characters ahead and navigate
 inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#pum#next(1) :
@@ -68,3 +68,9 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
 
 " Use <c-space> to trigger completion
 inoremap <silent><expr> <c-@> coc#refresh()
+
+" Dependenciy of the above. fom Coc github.
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
