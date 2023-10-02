@@ -1,5 +1,4 @@
 ---
-
 extends: default
 
 rules:
@@ -18,21 +17,25 @@ rules:
   empty-lines: enable
   empty-values: enable
   hyphens: enable
-  indentation: enable
+  indentation:
+    spaces: consistent
+    indent-sequences: consistent
   key-duplicates: enable
   key-ordering: disable
-  line-length: enable
+  line-length:
+    max: 100
+    allow-non-breakable-words: true
+    allow-non-breakable-inline-mappings: true
   new-line-at-end-of-file: enable
   new-lines: enable
   octal-values: enable
   quoted-strings:
     quote-type: double
-    required: only-when-needed
+    required: false
     allow-quoted-quotes: true
   trailing-spaces: enable
   truthy:
     allowed-values:
-      - 'true'
-      - 'false'
-      - 'on'
-      - 'off'
+      - "true"
+      - "false"
+# vim: ft=yaml

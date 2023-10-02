@@ -22,3 +22,6 @@
 
 [core]
     hooksPath = ~/.alex-environ/private/home/git_hooks
+
+[alias]
+	adog = log --all --decorate --oneline --graph
