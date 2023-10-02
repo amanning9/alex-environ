@@ -1,0 +1,12 @@
+vim-enhanced
+nodejs
+python-unversioned-command
+python-pip
+yamllint
+htop
+poetry
+python-flake8
+python-mypy
+python-black
+pylint
+tox
