@@ -1,4 +1,6 @@
 {
+    "coc.preferences.extensionUpdateCheck": "weekly",
+
     "rust-client.disableRustup": true,
 
     "javascript.format.enabled": false,
@@ -13,5 +15,4 @@
 
     "jedi.enable": true,
     "suggest.noselect": true,
-
 }

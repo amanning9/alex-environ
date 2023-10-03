@@ -6,7 +6,6 @@ SSH_ENV=$HOME/.ssh/environment.`hostname`
 start_agent ()
 {
     # $1 Socket path to bind to.
-
         # If not running interactively, don't do anything else
         [[ $- != *i* ]] && return
 
@@ -30,6 +29,11 @@ load_keys ()
                 ssh-add
         fi
 }
+
+# If not running interactively, don't do anything else
+[[ $- != *i* ]] && return
+# If we are a subshell we should not do anything.
+[[ $0 != -* ]] && return
 
 # Source SSH settings, if applicable
 # If a ssh auth socket exists at this point, it must be from a forwarded agent.
