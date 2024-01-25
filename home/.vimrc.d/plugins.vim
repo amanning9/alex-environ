@@ -26,7 +26,7 @@ function! LoadPlugins()
 
     Plug 'amanning9/django-plus.vim'                    " Improvements for identifying files in django projects.
     Plug 'towolf/vim-helm'
-    Plug 'Glench/Vim-Jinja2-Syntax'                     " Jinja syntax detection.
+    Plug 'https://gitlab.com/HiPhish/jinja.vim.git'                     " Jinja syntax detection.
 endfunction
 
 " PLUGIN INITIALISATION
