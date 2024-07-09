@@ -22,7 +22,7 @@ ssh_node() {
     shift
   fi
 
-  ns=default
+  ns=kube-system
   pod=$(
     kubectl create -n "$ns" -o name "$@" -f - <<EOF
 apiVersion: v1
@@ -35,7 +35,7 @@ spec:
   nodeName: $node
   containers:
   - name: ssh-node
-    image: busybox
+    image: rancherlabs/swiss-army-knife
     imagePullPolicy: IfNotPresent
     command: ["chroot", "/host"]
     tty: true

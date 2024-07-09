@@ -43,6 +43,9 @@ let g:ale_fortran_gcc_use_free_form = 0
 "JSON
 let g:ale_json_jq_options = '--sort-keys'
 
+" Spell checking
+let g:ale_cspell_options = '--config ~/.alex-envion/home/.config/cspell/config.yaml'
+
 """Base Settings for COC
 let g:coc_config_home = '~/.alex-environ/home/.vimrc.d/coc'
 let g:coc_global_extensions = ['coc-jedi', 'coc-rust-analyzer', 'coc-tsserver', 'coc-json', 'coc-htmldjango']
