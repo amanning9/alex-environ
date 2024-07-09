@@ -65,3 +65,6 @@ ln -s ${environ_home}/.config/mypy ~/.config/mypy
 
 ##### In home dir
 ln -s ${environ_home}/.fonts ~/.fonts
+
+# readline
+ln -s ${environ_home}/.inputrc ~/.inputrc
