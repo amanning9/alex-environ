@@ -4,6 +4,8 @@
 [[ $- != *i* ]] && return
 
 #SET PATH IN .BASH_PROFILE
+# Set the shell's editor to vi mode
+set -o vi
 
 #don't put duplicate lines or lines beginning with a space into history
 HISTCONTROL=ignoreboth
